@@ -354,7 +354,7 @@ Message have zero to two payloads.
     </PtzControl>
     </body>
     ```
-    
+
     - **Notes** : The known movement commands are `"left"`, `"right"`, `"up"`, `"down"`, `"leftUp"`,
                   `"leftDown"`, `"rightUp"`, `"rightDown"` and `"stop"` although the diagonal movement
                   does not seem to work.
@@ -394,7 +394,7 @@ Message have zero to two payloads.
     </PtzPreset>
     </body>
     ```
-    
+
     - **Notes** : The known values for command are `"setPos"` and `"toPos"`
 
   - Camera
@@ -1655,10 +1655,30 @@ Message have zero to two payloads.
 
     - Payload
 
+    If no SD Card:
+
     ```xml
     <?xml version="1.0" encoding="UTF-8" ?>
     <body>
     <HddInfoList version="1.1" />
+    </body>
+    ```
+
+    If there is a SD Card
+
+    ```xml
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <body>
+    <HddInfoList version="1.1">
+    <HddInfo>
+    <number>0</number>
+    <capacity>30</capacity>
+    <format>1</format>
+    <mount>1</mount>
+    <remainSize>29</remainSize>
+    <remainSizeM>551</remainSizeM>
+    </HddInfo>
+    </HddInfoList>
     </body>
     ```
 
